@@ -1,13 +1,5 @@
-# :bulb: Ef core inhritance 
+# :bulb: Table-per-hierarchy (tph)
 
-There is 3 approach for creating tables base on classes which inherited from a base class and derived the base class and were gonna to indicate these ways and create sample for each of them.
+The default and prefered way to create objects base on each other is `tph` pattern.
 
-By convention, EF will not automatically scan for base or derived types; this means that if you want a CLR type in your hierarchy to be mapped, you must explicitly specify that type on your model.
-
-These solutions are dividing in 3 type 
->1. Table-per-hierarchy (tph)
->2. Table-per-type (tpt)
->3. Table-per-concrete-type (tpct)
-
-### :link: See also
-[Documentation](https://learn.microsoft.com/en-us/ef/core/modeling/inheritance/)
+In tph **EfCore** uses one single table to store records for multiple tables with an extra column announced as `Discriminator` to indicates each record belongs to which table.
