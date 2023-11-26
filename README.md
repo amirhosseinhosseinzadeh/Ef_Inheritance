@@ -31,3 +31,7 @@ CREATE TABLE [SmartWatch] (
     CONSTRAINT [PK_SmartWatch] PRIMARY KEY ([Id])
 );
 ```
+
+### result
+
+![tpt](https://github.com/amirhosseinhosseinzadeh/Ef_Inheritance/assets/77617352/5c3ce194-2ee8-457d-9217-d6d97eb907ae)
