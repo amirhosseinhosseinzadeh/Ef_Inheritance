@@ -6,5 +6,7 @@ public class SmartWatch : Gadget
 
     public string BandColor { get; set; }
 
+    public int CameraSize { get; set; }
+
     public bool HeartBeatSensor { get; set; }
 }
