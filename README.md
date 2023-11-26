@@ -9,5 +9,8 @@ These solutions are dividing in 3 type
 >2. Table-per-type (tpt)
 >3. Table-per-concrete-type (tpct)
 
-### :link: See also
-[Documentation](https://learn.microsoft.com/en-us/ef/core/modeling/inheritance/)
+### :eye_speech_bubble: See also
+:link: [Original_Documentation](https://learn.microsoft.com/en-us/ef/core/modeling/inheritance/)
+
+
+:link: [TPH](https://github.com/amirhosseinhosseinzadeh/Ef_Inheritance/tree/tph)
