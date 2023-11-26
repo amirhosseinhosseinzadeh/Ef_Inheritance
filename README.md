@@ -1,4 +1,4 @@
-# :bulb: Ef core inhritance 
+# :bulb: Ef core inheritance 
 
 There is 3 approach for creating tables base on classes which inherited from a base class and derived the base class and were gonna to indicate these ways and create sample for each of them.
 
