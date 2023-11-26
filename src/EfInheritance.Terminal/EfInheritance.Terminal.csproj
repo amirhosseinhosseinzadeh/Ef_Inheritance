@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\libs\EfInheritance.EfCore\EfInheritance.EfCore.csproj" />
+  </ItemGroup>
+
 </Project>
