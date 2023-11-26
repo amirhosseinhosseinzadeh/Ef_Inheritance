@@ -14,3 +14,6 @@ These solutions are dividing in 3 type
 
 
 :link: [TPH](https://github.com/amirhosseinhosseinzadeh/Ef_Inheritance/tree/tph)
+
+:link: [TPT](https://github.com/amirhosseinhosseinzadeh/Ef_Inheritance/tree/tpt)
+
