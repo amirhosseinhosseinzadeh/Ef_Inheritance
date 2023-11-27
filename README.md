@@ -7,7 +7,7 @@ By convention, EF will not automatically scan for base or derived types; this me
 These solutions are dividing in 3 type 
 >1. Table-per-hierarchy (tph)
 >2. Table-per-type (tpt)
->3. Table-per-concrete-type (tpct)
+>3. Table-per-concrete-type (tpc)
 
 ### :eye_speech_bubble: See also
 :link: [Original_Documentation](https://learn.microsoft.com/en-us/ef/core/modeling/inheritance/)
