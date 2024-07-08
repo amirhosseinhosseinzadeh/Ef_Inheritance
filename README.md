@@ -41,6 +41,12 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
         .HasColumnName("Url");
 }
 ```
+
+### The result
+
+![tph](https://github.com/amirhosseinhosseinzadeh/Ef_Inheritance/assets/77617352/333814c3-c77f-443b-b00c-f4cdbc570f0b)
+
+
 ### How to run
 Create a secrete json file inside project **EfInheritance.Terminal** with name **secret.json** with below format:
 ```json
