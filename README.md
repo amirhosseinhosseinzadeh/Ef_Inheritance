@@ -48,7 +48,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 
 
 ### How to run
-Create a secrete json file inside project **EfInheritance.Terminal** with name **secret.json** with below format:
+Create a secrete json file inside project **EfInheritance.Terminal** with name **secrete.json** with below format:
 ```json
 {
     "ConnectionString" : "your connection string" 
