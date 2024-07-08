@@ -8,6 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="secrete.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="secrete.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\libs\EfInheritance.EfCore\EfInheritance.EfCore.csproj" />
   </ItemGroup>
 

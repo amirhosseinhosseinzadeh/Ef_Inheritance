@@ -1,4 +1,6 @@
-﻿using EfInheritance.Domain;
+﻿using System.Text.Json;
+using EfInheritance.Domain;
+using EfInheritance.Domain.Utilities;
 using Microsoft.EntityFrameworkCore;
 
 namespace EfInheritance.EfCore;
@@ -15,7 +17,8 @@ public class AppDbContext : DbContext
 
         builder.Entity<Gadget>()
             .ToTable(nameof(Gadget))
-            .HasDiscriminator<string>("Gadget_Type")
+            .UseTphMappingStrategy()
+            .HasDiscriminator<string>("Gadget_Type") // also other value type, ypes are suitable to be assign to table as discriminator
             .HasValue<SmartPhone>("SmartPhone")
             .HasValue<SmartWatch>("SmartWatch");
 
@@ -84,7 +87,14 @@ public class AppDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
+        using IOHandler<JsonDocument> iOHandler = new IOJsonHandler();
+        iOHandler.GetConnectionStringFacadeAsync().ContinueWith(x =>
+        {
+            if (x.IsCompletedSuccessfully)
+                optionsBuilder.UseSqlServer(x.Result);
+            else
+                throw x.Exception;
+        }).Wait();
         base.OnConfiguring(optionsBuilder);
-        optionsBuilder.UseSqlServer("server=db-dev;database = tph; Integrated Security=True;MultipleActiveResultSets=True;TrustServerCertificate=True;");
     }
 }

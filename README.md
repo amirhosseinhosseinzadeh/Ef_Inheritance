@@ -1,6 +1,7 @@
 # :bulb: Table-per-hierarchy (tph)
 
-The default and prefered way to create objects base on each other is `tph` pattern.
+<!-- The default and prefered way to create objects base on each other is `tph` pattern. -->
+As a matter of a fact the most common way to create table's which using inheritence is **TPH** method.
 
 In tph **EfCore** uses one single table to store records for multiple tables with an extra column announced as `Discriminator` to indicates each record belongs to which table.
 
@@ -14,13 +15,14 @@ In this Example we have 3 Entity .One single clase as **base** and two other as 
 We can also indicate the `Discriminator` column name explicitly as shown in below :
 ```cs
 builder.Entity<Gadget>()
+    .UseTphMappingStrategy()
     .HasDiscriminator<string>("Gadget_Type")
     .HasValue<SmartPhone>("SmartPhone")
     .HasValue<SmartWatch>("SmartWatch");
 ```
 
 > [!TIP]
-> Configuring the disc `Discriminator` column is like usual columns
+> Configuring the `Discriminator` column is like usual columns
 
 
 In some cases some of derived **Entities** can have simmilar columns (In name and type etc ..) This type of columns being reperesent as `Shared Columns`.
