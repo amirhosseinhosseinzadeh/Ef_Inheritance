@@ -41,3 +41,11 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
         .HasColumnName("Url");
 }
 ```
+### How to run
+Create a secrete json file inside project **EfInheritance.Terminal** with name **secret.json** with below format:
+```json
+{
+    "ConnectionString" : "your connection string" 
+}
+```
+then run project and check the created table
