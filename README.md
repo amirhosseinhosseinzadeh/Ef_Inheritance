@@ -17,3 +17,4 @@ These solutions are dividing in 3 type
 
 :link: [TPT](https://github.com/amirhosseinhosseinzadeh/Ef_Inheritance/tree/tpt)
 
+:link: [TPC](https://github.com/amirhosseinhosseinzadeh/Ef_Inheritance/tree/tpc)
