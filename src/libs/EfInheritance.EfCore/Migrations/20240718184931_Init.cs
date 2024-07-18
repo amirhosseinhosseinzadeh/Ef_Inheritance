@@ -3,8 +3,6 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
-
 namespace EfInheritance.EfCore.Migrations
 {
     /// <inheritdoc />
@@ -49,20 +47,6 @@ namespace EfInheritance.EfCore.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.InsertData(
-                table: "Policy",
-                columns: new[] { "Id", "CoveringAmount", "EffectionDate", "EndDate", "Title" },
-                values: new object[,]
-                {
-                    { 1, 5000m, new DateTime(2024, 7, 12, 15, 19, 42, 927, DateTimeKind.Local).AddTicks(2329), new DateTime(2025, 7, 12, 15, 19, 42, 927, DateTimeKind.Local).AddTicks(2337), "Vehicle Thired party inssurance" },
-                    { 2, 0m, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Endorsement",
-                columns: new[] { "Id", "EndorsementCoveringAmount", "EndorsementEffectionDate", "EndorsementEndDate", "EndorsementRegsterDate" },
-                values: new object[] { 2, 6000m, new DateTime(2024, 8, 12, 15, 19, 42, 927, DateTimeKind.Local).AddTicks(2459), new DateTime(2026, 8, 12, 15, 19, 42, 927, DateTimeKind.Local).AddTicks(2456), new DateTime(2024, 7, 12, 15, 19, 42, 927, DateTimeKind.Local).AddTicks(2460) });
         }
 
         /// <inheritdoc />

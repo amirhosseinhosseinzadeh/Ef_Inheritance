@@ -21,31 +21,6 @@ public class AppDbContext : DbContext
             .ToTable(nameof(Policy));
         builder.Entity<Endorsement>()
             .ToTable(nameof(Endorsement));
-
-        builder.Entity<Policy>()
-            .HasData(new Policy[]
-            {
-                new()
-                {
-                    Id= 1,
-                    CoveringAmount = 5000,
-                    EffectionDate = DateTime.Now,
-                    EndDate = DateTime.Now.AddYears(1),
-                    Title = "Vehicle Thired party inssurance"
-                }
-            });
-        builder.Entity<Endorsement>()
-            .HasData(new Endorsement[]
-            {
-                new()
-                {
-                    Id = 2,
-                    EndorsementCoveringAmount = 6000,
-                    EndorsementEndDate = DateTime.Now.AddMonths(1).AddYears(2),
-                    EndorsementEffectionDate = DateTime.Now.AddMonths(1),
-                    EndorsementRegsterDate = DateTime.Now
-                }
-            });
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

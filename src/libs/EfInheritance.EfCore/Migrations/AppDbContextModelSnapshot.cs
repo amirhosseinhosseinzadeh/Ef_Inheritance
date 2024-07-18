@@ -47,16 +47,6 @@ namespace EfInheritance.EfCore.Migrations
                     b.ToTable("Policy", (string)null);
 
                     b.UseTptMappingStrategy();
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CoveringAmount = 5000m,
-                            EffectionDate = new DateTime(2024, 7, 12, 15, 19, 42, 927, DateTimeKind.Local).AddTicks(2329),
-                            EndDate = new DateTime(2025, 7, 12, 15, 19, 42, 927, DateTimeKind.Local).AddTicks(2337),
-                            Title = "Vehicle Thired party inssurance"
-                        });
                 });
 
             modelBuilder.Entity("EfInheritance.Domain.Endorsement", b =>
@@ -76,19 +66,6 @@ namespace EfInheritance.EfCore.Migrations
                         .HasColumnType("datetime2");
 
                     b.ToTable("Endorsement", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 2,
-                            CoveringAmount = 0m,
-                            EffectionDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EndorsementCoveringAmount = 6000m,
-                            EndorsementEffectionDate = new DateTime(2024, 8, 12, 15, 19, 42, 927, DateTimeKind.Local).AddTicks(2459),
-                            EndorsementEndDate = new DateTime(2026, 8, 12, 15, 19, 42, 927, DateTimeKind.Local).AddTicks(2456),
-                            EndorsementRegsterDate = new DateTime(2024, 7, 12, 15, 19, 42, 927, DateTimeKind.Local).AddTicks(2460)
-                        });
                 });
 
             modelBuilder.Entity("EfInheritance.Domain.Endorsement", b =>
